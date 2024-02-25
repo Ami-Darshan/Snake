@@ -1,0 +1,261 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    border-style: none;
+    box-sizing: border-box;
+    font-family: 'VT323', sans-serif;
+  }
+
+header {
+    background-color: #141C1D;
+    text-align: center;
+    padding: 2.5rem;
+    font-size: 2.5rem;
+}
+
+body {
+    overflow: auto;
+}
+
+#logo {
+    color: #9ddb0a;
+}
+
+#wrapper {
+    background-color: #39406c;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+
+#screen {
+    display: flex;
+    background-color: #9ddb0a;
+    flex-direction: column;
+    align-items: center;
+    padding: 1vw;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+
+}
+
+#score {
+    font-size: 3rem;
+    width: 100%;
+    position: relative;
+}
+
+#snakeboard {
+    background-color: #9ddb0a;
+    border: 3px solid #283c01;
+    width: 40vw;
+}
+
+footer {
+    background-color: #b4bade;
+    padding: 1rem;
+    height: 60vh;
+}
+
+#socials a {
+    padding: 2rem;
+    font-size: 2.5rem;
+    color: #283c01;
+}
+
+/* CSS for High Scores Table */
+
+.table {
+    text-align: center;
+  }
+  
+  .table h2 {
+    margin-bottom: 1rem; /* Add a gap below the h2 */
+    font-size: 4vh;
+    color: #283c01;
+  }
+  
+  table {
+    margin: 0 auto; 
+    border-collapse: collapse;
+    width: 40vw; 
+    border: 3px solid #283c01;
+  }
+  
+  table th, table td {
+    padding: 10px;
+  }
+  
+  table th {
+    background-color: #39406c;
+    color: #9ddb0a;
+    font-weight: bold;
+    font-size: 3vh;
+  }
+  
+  table td {
+    font-size: 4vh;
+    color: #39406c;
+  }
+  
+  #socials {
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+/* CSS for Buttons */
+
+#play {
+    margin-bottom: 3rem;
+}
+
+#flexContainer {
+    display: none;
+}
+
+.flexItem {
+    text-align: center;
+}
+
+.flexItem span{
+    margin-right: 1rem;
+}
+
+.btn {
+    border: none;
+    border-radius: 50%;
+    width: 5rem; 
+    height: 4rem; 
+    font-size: 2rem; 
+    background-color: #283c01;
+    color: #9ddb0a;
+    margin: 0 3rem 0 3rem;
+  }
+
+
+/* CSS to style the modal */
+ 
+#gameOverModal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #141C1D;
+    color: #9ddb0a;
+    border: 0.1rem solid #283c01;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 80vw;
+  }
+  
+  #gameOverForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #gameOverModal h1 {
+    font-size: 3rem;
+  }
+  
+  #gameOverModal h3 {
+    font-size: 2rem;
+  }
+  
+  #gameOverModal input {
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem 0;
+    border: none;
+    border-bottom: 0.2rem solid #b4bade;
+    background-color: transparent;
+    color: #9ddb0a;
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  .button {
+    background-color: #283c01;
+    color: #9ddb0a;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  
+  .button:hover {
+    background-color: #9ddb0a;
+    color: #141C1D;
+  }
+  
+
+/* Media Queries */
+
+@media (max-width: 1400px) {
+    #snakeboard {
+        width: 50vw;
+    }
+    #score {
+        font-size: 2.7rem;
+    }
+}
+
+@media (max-width: 1125px) {
+    #snakeboard {
+        width: 60vw;
+    }
+    #score {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    #flexContainer {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    #play {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 930px) {
+    #snakeboard {
+        width: 70vw;
+    }
+    #score {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 800px) {
+    #snakeboard {
+        width: 80vw;
+    }
+    #score {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 700px) {
+    #snakeboard {
+        width: 95vw;
+    }
+    #score {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .btn {
+        margin: 0 1.5rem 0 1.5rem;
+      }
+}

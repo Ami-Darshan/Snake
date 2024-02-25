@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Enjoy the classic Snake game online. Test your skills and see 
+      how long you can grow the snake without hitting the walls or yourself. 
+      Play now and challenge your friends to beat your high score!"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- google font import -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- font awesome import -->
+    <script
+      src="https://kit.fontawesome.com/87f631cc45.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>SNAKE</title>
+  </head>
+  <body>
+    <!-- HTML for snake game -->
+    <header>
+      <h1 id="logo">SNAKE</h1>
+    </header>
+    <!-- Main container for game -->
+    <div id="wrapper">
+      <div id="screen">
+        <div id="score">000</div>
+        <!-- Canvas for game -->
+        <canvas id="snakeboard" width="300" height="180"></canvas>
+      </div>
+      <div>
+        <button class="btn" id="play">Play</button>
+      </div>
+      <!-- Movement buttons for mobile, only show at less than 1024px -->
+      <div id="flexContainer">
+        <div class="flexItem">
+          <button class="btn" id="btnUp">
+            <i class="fa-solid fa-circle-arrow-up"></i>
+          </button>
+        </div>
+        <div class="flexItem">
+          <button class="btn" id="btnLeft">
+            <i class="fa-solid fa-circle-arrow-left"></i>
+          </button>
+          <span></span>
+          <button class="btn" id="btnRight">
+            <i class="fa-solid fa-circle-arrow-right"></i>
+          </button>
+        </div>
+        <div class="flexItem">
+          <button class="btn" id="btnDown">
+            <i class="fa-solid fa-circle-arrow-down"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!--Modal Dialog for High score and name input-->
+    <dialog id="gameOverModal">
+      <form method="dialog" id="gameOverForm">
+        <h1>You have a High Score!</h1>
+        <h3>Please add your name</h3>
+        <label for="playerName">
+          <input
+            type="text"
+            name="player-name"
+            id="playerName"
+            placeholder="Your Name"
+            maxlength="5"
+          />
+        </label>
+        <button class="button" type="submit" id="closeModal">Save</button>
+      </form>
+    </dialog>
+
+    <footer>
+      <div class="table">
+        <h2>High Scores</h2>
+        <table id="highScores">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Score</th>
+              <th>Name</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div id="socials">
+        <a
+          href="https://www.facebook.com/"
+          target="_blank"
+          rel="noopener"
+          aria-label="Visit our Facebook page (opens in a new tab)"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+
+        <a
+          href="https://twitter.com/"
+          target="_blank"
+          rel="noopener"
+          aria-label="Visit our Twitter page (opens in a new tab)"
+          ><i class="fa-brands fa-twitter"></i
+        ></a>
+
+        <a
+          href="https://www.youtube.com"
+          target="_blank"
+          rel="noopener"
+          aria-label="Visit our Youtube page (opens in a new tab)"
+          ><i class="fa-brands fa-square-youtube"></i
+        ></a>
+
+        <a
+          href="https://www.instagram.com/"
+          target="_blank"
+          rel="noopener"
+          aria-label="Visit our InstaGram page (opens in a new tab)"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+      </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
